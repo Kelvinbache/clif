@@ -1,4 +1,4 @@
-import { db } from "./sqlite.mjs";
+import { db } from "../sqlite.mjs";
 
 // other tables
 
@@ -12,12 +12,9 @@ function controller(err, row) {
 
 function select() {
   db.each(
-    `SELECT 
-      product_name,
-      product_description,
-      product_prince,
-      product_type 
-      FROM product`,
+    `SELECT  
+    *
+      FROM product,user,store`,
     controller
   );
 }
