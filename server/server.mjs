@@ -1,15 +1,13 @@
 import express from "express";
+import { router } from "./routers/get.mjs";
 
 const app = express();
 const port = 3000;
-
-function controller(req, res) {
-  res.send("hello word");
-}
 
 function url() {
   console.log(`http://localhost:${port}`);
 }
 
-app.get("/", controller);
+//router get
+app.use("/", router);
 app.listen(port, url);

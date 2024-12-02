@@ -1,7 +1,7 @@
 export function drive_db(err) {
-  if (!err) {
-    console.log("base data exist");
+  if (err) {
+    console.error(err);
   }
 
-  console.error(err);
+  console.log("All is goog");
 }

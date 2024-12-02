@@ -17,8 +17,7 @@ async function create_table() {
  `,
 
     tables_store: `
-
-CREATE TABLE IF NOT EXISTS store (
+     CREATE TABLE IF NOT EXISTS store (
      store_id INTEGER PRIMARY KEY AUTOINCREMENT,
      store_name TEXT NOT NULL,
      address TEXT NOT NULL,
