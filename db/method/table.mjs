@@ -1,6 +1,7 @@
 import { db } from "../sqlite.mjs";
-import { execute } from "./errors/drive_table.mjs";
+import { execute } from "../driver/drive_table.mjs"
 
+//!start this from the beginning
 
 async function create_table() {
   const table = {
@@ -48,7 +49,7 @@ async function create_table() {
   };
 
   try {
-
+   
     await execute(db, table);
 
   } catch (err) {
@@ -60,6 +61,7 @@ async function create_table() {
     db.close();
 
   }
+
 }
 
 export { create_table };
