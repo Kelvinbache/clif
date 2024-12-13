@@ -1,6 +1,10 @@
-import { select } from "../../db/method/select.mjs"; // !Error in the import 
+import { db } from "../../db/sqlite.mjs";
 
 export function controller_get(req, res, next) {
-  select();
-  res.json("hello word");
+  db.all("select * from user", (err, rows) => {
+    if (err) {
+      console.error(err);
+    }
+    res.json(rows);
+  });
 }
