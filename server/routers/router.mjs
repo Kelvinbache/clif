@@ -15,5 +15,3 @@ router.post("/user/my-store", controller_store);
 router.post("/user/my-store/product/new-product", controller_post_product);
 router.delete("/user/my-store/product", controller_delete);
 router.put("/user", controller_update_user);
-
-export { router };
