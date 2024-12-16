@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "index.js",
+  "main": "./server/server.mjs",
   "scripts": {
+    "dev":"node server/server.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "kelvin",
+
+  "author": {"name": "kelvin abachce","email": "kelvinabache12@gmail.com"},
   "license": "ISC"
 }

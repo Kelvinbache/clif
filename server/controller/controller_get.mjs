@@ -1,3 +1,12 @@
-export function controller_get(req, res) {
-  res.send("hello word");
+import { db } from "../../db/sqlite.mjs";
+
+export function controller_get(req, res, next) {
+  db.all("select * from user", (err, rows) => {
+    if (err) {
+      console.error(err);
+    }
+    res.json(rows);
+  });
 }
+
+// show now in the front page init 
