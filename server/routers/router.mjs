@@ -5,10 +5,11 @@ import { controller_store } from "../controller/controller_post_store.mjs";
 import { controller_post_product } from "../controller/controller_post_product.mjs";
 import { controller_delete } from "../controller/controller_delete.mjs";
 import { controller_update_user } from "../controller/controller_update.mjs";
+import { Validate } from "../middleware/validate.mjs";
 
 const router = Router();
 
-//! -----> split each methods in archive specify 
+//! -----> split each methods in archive specify
 router.get("/", controller_get);
 router.post("/user", controller_post); //  Do further post
 router.post("/user/my-store", controller_store);

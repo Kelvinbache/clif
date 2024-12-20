@@ -1,6 +1,7 @@
 import express from "express";
 import { router } from "./routers/router.mjs";
 
+
 const app = express();
 const port = 3000;
 
@@ -30,6 +31,7 @@ app.listen(port, url);
  *  1: Drive error global 
  *  2: Drive error controller post, get, delete, update
  *  3: Modify the drive error of base data  
+ *  4: Validate data
  * }
  * 
  * Add to the server : {
@@ -46,5 +48,9 @@ app.listen(port, url);
  * modify: {
  *   package-json : { 
  *   }  
+ * 
+ *   db : { 
+ *    1: add the method get if there is a filter
+ *   }
  * }
  */
