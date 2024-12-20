@@ -31,7 +31,6 @@ app.listen(port, url);
  *  1: Drive error global 
  *  2: Drive error controller post, get, delete, update
  *  3: Modify the drive error of base data  
- *  4: Validate data
  * }
  * 
  * Add to the server : {
