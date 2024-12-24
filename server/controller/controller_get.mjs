@@ -1,12 +1,13 @@
 import { db } from "../../db/sqlite.mjs";
+import { join } from "path";
 
 export function controller_get(req, res, next) {
   db.all("select * from user", (err, rows) => {
     if (err) {
       console.error(err);
     }
-    res.json(rows);
+    res.render(join(process.cwd(), "server", "views", "index"), { data: rows });
   });
 }
 
-// show now in the front page init 
+// show now in the front page init

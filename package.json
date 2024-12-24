@@ -5,10 +5,16 @@
   "type": "module",
   "main": "./server/server.mjs",
   "scripts": {
-    "dev":"node server/server.mjs",
+    "dev": "node server/server.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-
-  "author": {"name": "kelvin abachce","email": "kelvinabache12@gmail.com"},
-  "license": "ISC"
+  "author": {
+    "name": "kelvin abachce",
+    "email": "kelvinabache12@gmail.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
 }
