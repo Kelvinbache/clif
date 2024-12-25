@@ -3,18 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="public/css/stylee.css" type="text/css">    
     <title>Document</title>
   </head>
   <body>
-    <ul>
-      <% data.forEach(function(user){ %>
-      <li>
-        name:<%= user.name%> <br>
-        last_name:<%= user.last_name%> <br> 
-        email:<%= user.email%> <br>
-        phone:<%= user.phone%> 
-      </li>
-      <% }); %>
-    </ul>
+    <!-- pass the url address, to make a condition -->
+    <%- include('template/page/from_user.ejs'); %>
   </body>
 </html>
