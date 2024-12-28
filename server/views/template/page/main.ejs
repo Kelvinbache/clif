@@ -1,0 +1,12 @@
+<main>
+  <section>
+    <article>
+      <h2>the data is get</h2>
+      <ul>
+        <% user.forEach(function(data) { %>
+        <li><%=data.name %> <%=data.last_name %> <%=data.phone %></li>
+        <% }) %>
+      </ul>
+    </article>
+  </section>
+</main>
