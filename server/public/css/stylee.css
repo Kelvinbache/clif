@@ -1,44 +1,101 @@
-body {
-  margin: 0;
-  background: #f1b04c;
+html,body {
+  margin: 0px;
+  padding: 0px;
 }
 
-.content-form-user {
+body {
+  background: linear-gradient(to bottom, #ec9006, #ee9f27, #f1b04c, #f5c77e);
+}
+
+/* content global */
+.content {
   display: grid;
+}
+
+/* header */
+
+.header {
+  width: 90px;
+  padding: 26px;
+  z-index: 1;
+  position: relative;
+  left: 216px;
+  top: 170px;
+}
+
+.header > h2 > a {
+  font-size: 50px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*navigation*/
+
+.navigation {
+  background: #f9ddb1;
+  width: 35%;
+  grid-column: 1/2;
+  grid-row: 1/4;
+  z-index: 1;
+}
+
+.address {
+  list-style: none;
+}
+
+.address > li {
+  padding-bottom: 35px;
+}
+
+.address > li > a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.address > li > a > i {
+  padding-right: 4px;
+}
+
+.address > li :hover{
+  color: rgb(255, 255, 255);
+}
+
+/* content of the form */
+  .content-form {
   width: auto;
   height: 641px;
   max-height: 645px;
+  grid-column: 2/4;
+  grid-row: 2/3;
+  margin-left: 30px;
 }
 
-.form-user {
-  background: linear-gradient( to bottom,rgba(168, 166, 166, 0.5),rgba(150, 173, 202, 0.9));
+.form {
+  background: linear-gradient(to bottom, #e88504, #ec9006, #ee9f27);
   border-radius: 25px;
   border: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.17);
   text-align: center;
-  width: auto;
 
-  height: auto;
+  height: 70%;
   width: 50%;
-
-  position: relative;
-  left: 55px;
-
-  grid-column: 2/4;
-  grid-row: 1/3;
 }
 
-.form-user > input {
+
+/* the input of form */
+.form > input {
   margin: 5px 0px 10px 0px;
   padding: 8px;
-  width: 35%;
- 
+  width: 36%;
+
   position: relative;
-  top: 74px;
+  top: 150px;
   left: 4px;
 }
 
-.form-user > label > i {
+.form > label > i {
   font-size: 23px;
   border: black solid 2px;
   background: black;
@@ -46,10 +103,49 @@ body {
   color: rgb(253, 253, 253);
 
   position: relative;
-  top: 78px;
-  left: 9px;
+  top: 154px;
+  left: 10px;
 }
 
+/* form of record  */
+
+.form-record {
+  background: linear-gradient(to bottom, #e88504, #ec9006, #ee9f27);
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.17);
+  text-align: center;
+
+  height: 70%;
+  width: 50%;
+}
+
+.form-record > input {
+  margin: 5px 0px 10px 0px;
+  padding: 8px;
+  width: 36%;
+
+  position: relative;
+  top: 125px;
+  left: 4px;
+}
+
+.form-record > label > i {
+  font-size: 23px;
+  border: black solid 2px;
+  background: black;
+  padding: 4px;
+  color: rgb(253, 253, 253);
+
+  position: relative;
+  top: 129px;
+  left: 10px;
+}
+
+
+
+
+/* button of submit */
 .button {
   width: 50px;
   height: 50px;
@@ -60,42 +156,45 @@ body {
     rgba(168, 166, 166, 0.5) 10%,
     rgba(150, 173, 202, 0.9) 90%
   );
-
   position: relative;
+  left: 250px;
   top: 10px;
-  left: 300px;
-
-
-  grid-row: 3/4;
-  grid-column: 2/4;
 }
 
-.button>i {
+.button > i {
   font-size: 22px;
   padding: 5px;
 }
-.button:hover{
+
+button:hover {
   background: aliceblue;
 }
 
-
-/* header */
-
-.header {
-  z-index: 1;
-  background: rgb(63, 113, 206);
-  width: 90px;
-  height: 80px;
-  padding: 26px;
-  text-align: center;
-  border-radius: 50%;
+/* button redirection to record */
+.button-redirection {
+  width: 50px;
+  height: 50px;
+  border-radius: 150px;
+  border: none;
+  text-decoration: none;
+  background: linear-gradient(to bottom, rgba(168, 166, 166, 0.5) 10%, rgba(150, 173, 202, 0.9) 90%);
   position: relative;
-  left: 665px;
-  top: 58px;
+  left: 130px;
+  top: 10px;
 }
 
-a {
-  text-decoration: none;
-  color: aliceblue;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+.button-redirection > a  {
+  color: black;
+  font-size: 22px;
+  padding: 5px;
+}
+
+
+/* footer */
+.footer {
+  background: black;
+  height: 60px;
+  width: auto;
+  grid-column: 1/4;
+  grid-row: 3/4;
 }

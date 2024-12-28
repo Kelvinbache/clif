@@ -1,6 +1,6 @@
-import { db } from "../../db/sqlite.mjs";
-import { drive_db } from "../../db/driver/drive_db.mjs";
-import { Validate } from "../middleware/validate.mjs";
+import { db } from "../../../db/sqlite.mjs";
+import { drive_db } from "../../../db/driver/drive_db.mjs";
+import { Validate } from "../../middleware/validate.mjs";
 
 export function controller_store(req, res, next) {
   const middleware = Validate(req.body,req.originalUrl);

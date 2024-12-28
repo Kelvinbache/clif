@@ -1,5 +1,5 @@
-import { db } from "../../db/sqlite.mjs";
-import { drive_db } from "../../db/driver/drive_db.mjs"; //! change the drive error for each method
+import { db } from "../../../db/sqlite.mjs";
+import { drive_db } from "../../../db/driver/drive_db.mjs"; //! change the drive error for each method
 
 export function controller_delete(req, res, next) {
   const { name } = req.body;
