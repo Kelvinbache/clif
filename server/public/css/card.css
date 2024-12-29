@@ -1,0 +1,24 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-column: 3/5;
+  grid-row: 2/3;
+  gap: 15px;
+}
+
+.content-card {
+  /* border: black solid 1px; */
+  width: 30%;
+}
+
+.button-buy{
+ font-size: 15px;
+ text-align: center;
+}
+
+
+.img-product {
+  width: auto;
+  height: auto;
+}
