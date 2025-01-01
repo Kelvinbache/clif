@@ -1,1 +1,1 @@
-SELECT * from users LIMIT 10; 
+SELECT user.name, store.store_name from users INNER JOIN store on user_id = store_id; 

@@ -1,21 +1,23 @@
 import { db } from "../../../db/sqlite.mjs";
 import { drive_db } from "../../../db/driver/drive_db.mjs";
-import { Validate } from "../../middleware/validate.mjs";
+import { repeat } from "../../../db/driver/repeated_data.mjs";
 
 export function controller_store(req, res, next) {
-  const middleware = Validate(req.body,req.originalUrl);
+  
+  const { name, address, state } = req.body;
+  const exists_data = repeat(name);
 
-  if (middleware) {
-    res.status(400).json(middleware);
+  if (exists_data){
+    
+    res.status(400).json({message:exists_data})
     next();
+  
   } else {
-    const { name, address, state } = req.body;
-    const store = db.prepare(
-      `INSERT INTO store (store_name,address,state_store) VALUES(?,?,?)`,
-      drive_db
-    );
-    store.run([name, address, state]);
 
+    const store = db.prepare(`INSERT INTO store (store_name,address,state_store) VALUES(?,?,?)`, drive_db);
+    store.run([name, address, state]);
     res.json("send");
+
   }
+
 }

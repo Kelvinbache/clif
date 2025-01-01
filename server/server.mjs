@@ -1,6 +1,7 @@
 import express from "express";
 import { router } from "./routers/router.mjs";
 import { join } from "path";
+import { call_validate_data } from "./middleware/validate.mjs";
 
 const app = express();
 const port = 3000;
@@ -8,18 +9,17 @@ const port = 3000;
 app.disable("x-powered-by");
 app.use(express.json());
 
-app.use("/public", express.static(join(process.cwd(), "server" ,"public")));
-
+app.use("/public", express.static(join(process.cwd(), "server", "public")));
 
 app.set("view engine", "ejs");
 app.set("views", join(process.cwd(), "views"));
 
 function url() {
-  console.log(`http://localhost:${port}`); 
+  console.log(`http://localhost:${port}`);
 }
 
 //router get
-app.use("/", router);
+app.use("/", call_validate_data, router);
 app.listen(port, url);
 
 /**
