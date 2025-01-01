@@ -2,16 +2,16 @@ import { db } from "../sqlite.mjs";
 
 export function repeat(data) {
  
-    let boolean 
+    let boolean // deberia quitar esto de aqui
 
 db.all(`SELECT name from user `, (err, rows) => {
 
     if (err) return err;
 
-    boolean = rows.some((row) => row.name === data);
+    boolean = rows.some((row) => row.name === data); // si me da el valor 
     console.log(boolean)
 
 });
 
-  return boolean;
+  return boolean; // pero cuando llega aqui de vuelve indefinido 
 }
