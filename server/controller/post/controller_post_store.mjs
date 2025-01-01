@@ -1,6 +1,6 @@
 import { db } from "../../../db/sqlite.mjs";
 import { drive_db } from "../../../db/driver/drive_db.mjs";
-import { repeat } from "../../../db/driver/repeated_data.mjs";
+import { repeat } from "../../middleware/repeated_data.mjs";
 
 export function controller_store(req, res, next) {
   

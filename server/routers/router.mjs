@@ -19,6 +19,7 @@ import { controller_delete } from "../controller/delete/controller_delete.mjs";
 
 //method put 
 import { controller_update_user } from "../controller/put/controller_update.mjs";
+import { repeat } from "../middleware/repeated_data.mjs";
 
 export const router = Router();
 
@@ -29,7 +30,7 @@ router.get("/record", form_record) //-----> new record //? redirect but it is no
 router.get("/product", form_products);
 router.get("/store", form_store);
 
-router.post("/user", controller_post); //  Do further post
+router.post("/user", repeat , controller_post); //  Do further post
 router.post("/user/my-store", controller_store); //change address name
 router.post("/user/my-store/product/new-product", controller_post_product); //change address name
 
