@@ -31,7 +31,7 @@ router.get("/product", form_products);
 router.get("/store", form_store);
 
 router.post("/user", repeat , controller_post); //  Do further post
-router.post("/user/my-store", controller_store); //change address name
+router.post("/user/my-store", repeat,controller_store); //change address name
 router.post("/user/my-store/product/new-product", controller_post_product); //change address name
 
 router.delete("/user/my-store/product", controller_delete); //change address name

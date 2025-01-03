@@ -13,7 +13,8 @@ const execute = async function (db, sql) {
      DROP TABLE IF EXISTS user;
      DROP TABLE IF EXISTS store;
      DROP TABLE IF EXISTS product;
-     DROP TABLE IF EXISTS img;
+     DROP TABLE IF EXISTS Token;
+
   `);
     }
   }

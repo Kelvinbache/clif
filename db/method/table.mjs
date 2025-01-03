@@ -12,11 +12,19 @@ async function create_table() {
      name TEXT NOT NULL,
      last_name TEXT NOT NULL,
      email VARCHAR(50) NOT NULL,
-     phone INTEGER NOT NULL
- );
+     phone INTEGER NOT NULL, 
+     password VARCHAR(10) NOT NULL  
+);
 
  `,
-
+  
+ token : `
+     CREATE TABLE IF NOT EXISTS Token(
+     token_id INTEGER PRIMARY KEY AUTOINCREMENT,
+     token TEXT NOT NULL 
+  );
+ `
+ , 
     tables_store: `
      CREATE TABLE IF NOT EXISTS store (
      store_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -37,15 +45,17 @@ async function create_table() {
 
  `,
 
-    tables_img: `
+//     tables_img: `
 
- CREATE TABLE IF NOT EXISTS img (
-     img_id INTEGER PRIMARY KEY AUTOINCREMENT,
-     img_img BLOB NOT NULL,
-     img_data VARCHAR(225) NOT NULL
- );
+//  CREATE TABLE IF NOT EXISTS img (
+//      img_id INTEGER PRIMARY KEY AUTOINCREMENT,
+//      img_img BLOB NOT NULL,
+//      img_data VARCHAR(225) NOT NULL
+//  );
 
-`,
+// `
+
+
   };
 
   try {
