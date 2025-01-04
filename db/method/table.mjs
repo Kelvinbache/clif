@@ -5,16 +5,16 @@ import { execute } from "../driver/drive_table.mjs"
 
 async function create_table() {
   const table = {
-    tables_user: `
 
-    CREATE TABLE IF NOT EXISTS user (
+    tables_user: `
+     
+     CREATE TABLE IF NOT EXISTS user (
      user_id INTEGER PRIMARY KEY AUTOINCREMENT,
      name TEXT NOT NULL,
      last_name TEXT NOT NULL,
      email VARCHAR(50) NOT NULL,
-     phone INTEGER NOT NULL, 
-     password VARCHAR(10) NOT NULL  
-);
+     phone INTEGER NOT NULL   
+  );
 
  `,
   
@@ -64,7 +64,7 @@ async function create_table() {
 
   } catch (err) {
 
-    console.log(err);
+    return `message:${err}`;
 
   } finally {
 

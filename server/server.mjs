@@ -2,9 +2,9 @@ import express from "express";
 import { router } from "./routers/router.mjs";
 import { join } from "path";
 import { call_validate_data } from "./middleware/validate.mjs";
+import { config } from "./config.mjs";
 
 const app = express();
-const port = 3000;
 
 app.disable("x-powered-by");
 app.use(express.json());
@@ -15,12 +15,12 @@ app.set("view engine", "ejs");
 app.set("views", join(process.cwd(), "views"));
 
 function url() {
-  console.log(`http://localhost:${port}`);
+  console.log(`http://localhost:${config.port}`);
 }
 
 //router get
-app.use("/", call_validate_data, router);
-app.listen(port, url);
+app.use("/", call_validate_data, router); // create a drive global to the error 500
+app.listen(config.port, url);
 
 /**
  * takes:

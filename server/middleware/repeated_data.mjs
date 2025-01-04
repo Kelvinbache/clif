@@ -1,4 +1,4 @@
-import { db } from "../../db/sqlite.mjs";
+  import { db } from "../../db/sqlite.mjs";
 
 export function repeat(req, res, next) {
 
@@ -12,15 +12,10 @@ export function repeat(req, res, next) {
     
     }
 
-      const data = Object.values(req.body);
+      const {name, email, phone} = req.body;
 
-    
-      for ( const item in data ) {
-
-        boolean = rows.some((row) => row.name === data[item] || row.email === data[item] || row.phone === data[item]);
+        boolean = rows.some((row) => row.name === name || row.email === email || row.phone === phone); // The other comparisons need to be made
         
-      }
-
 
       if (boolean) {
     

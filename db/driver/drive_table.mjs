@@ -10,10 +10,13 @@ const execute = async function (db, sql) {
 
     if (!value) {
       db.run(`
+     
      DROP TABLE IF EXISTS user;
      DROP TABLE IF EXISTS store;
      DROP TABLE IF EXISTS product;
      DROP TABLE IF EXISTS Token;
+
+     ALTER TABLE user ADD password TEXT;
 
   `);
     }
